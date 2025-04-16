@@ -1,4 +1,4 @@
-<h1 id="top" align="center">Core pgAdmin</h1>
+<h1 id="top" align="center">Database pgAdmin</h1>
 
 <br>
 
@@ -21,7 +21,7 @@
 
 <h2 id="intro">📌 About Project</h2>
 
-The core pgAdmin project focuses on building a pgAdmin image for managing PostgreSQL databases using microservice architecture.
+This project simplifies the deployment of pgAdmin, using Docker Compose. It provides pre-configured `.env` variable configurations.
 
 <br/>
 
@@ -35,29 +35,61 @@ The core pgAdmin project focuses on building a pgAdmin image for managing Postgr
 
 <h2 id="features">🔥 Features</h2>
 
-- **Docker Containerization:** The application is containerized for consistent deployment and scaling.
+- **Docker Containerization:** The application is containerized using Docker to ensure consistent deployment, scalability, and isolation across different environments.
+- **Docker Compose Deployment:** Simplifies deployment with Docker Compose configuration, enabling easy setup and service orchestration without complex commands.
+- **Network Compatibility:** Uses shared Docker network to work with other services.
+- **Persistent Data:** Binds the data directory from the host machine to the container, ensuring persistent data storage even with container restarts.
 - **Bind Mount Backup Directory:** Enables persistent data storage and backup using a bind mount directory.
-- **Docker Compose Deployment:** Simplified deployment with `docker-compose`, using `.env` configuration for easy customization without long commands.
+- **.env Configuration:** All environment variables are easily configurable using the `.env` file, simplifying configuration management.
 
 <br/>
 
 <h2 id="releases">🚢 Releases</h2>
 
-&nbsp; [![.](https://img.shields.io/badge/1.0.0-233838?style=flat&label=version&labelColor=470137&color=077521)](https://github.com/ahmettoguz/core-pgadmin/tree/v1.0.0)
+&nbsp; [![.](https://img.shields.io/badge/2.0.0-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/database-pgadmin/tree/v2.0.0)
+
+&nbsp; [![.](https://img.shields.io/badge/1.0.0-233838?style=flat&label=version&labelColor=470137&color=077521)](https://github.com/ahmettoguz/database-pgadmin/tree/v1.0.0)
 
 <br/>
 
 <h2 id="system-startup">🚀 System Startup</h2>
 
-- Create a new directory named `core`.
-- Clone the `core-docker-config` and `core-pgadmin` repositories into the `core` directory.
+- Create a new directory named `database`.
 
 ```
-git clone https://github.com/ahmettoguz/core-docker-config
-git clone https://github.com/ahmettoguz/core-pgadmin
+mkdir database
+cd database
 ```
 
-- Refer to the documentation provided in the [`core-docker-config`](https://github.com/ahmettoguz/core-docker-config) project for the system startup commands.
+- Clone project.
+
+```
+git clone https://github.com/ahmettoguz/database-pgadmin
+cd database-pgadmin
+```
+
+- Create `.env` file based on the `.env.example` file with credentails.
+
+```
+cp .env.example .env
+```
+
+- Create `network-database` network if not exists.
+
+```
+docker network create network-database
+```
+
+- Run container.
+
+```
+docker stop                      database-pgadmin-c
+docker rm                        database-pgadmin-c
+docker compose -p database up -d pgadmin
+docker logs -f                   database-pgadmin-c
+```
+
+- Refer to [`PostgreSQL`](https://github.com/ahmettoguz/database-postgresql) repository to launch PostgreSQL database.
 
 <br/>
 
