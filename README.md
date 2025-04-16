@@ -73,6 +73,8 @@ docker logs -f                   database-pgadmin-c
 
 - When create a backup, the file will be saved in the backup directory specified by the path in the .env file.
 
+- Refer to [`Initializer-Postgresql`](https://github.com/ahmettoguz/database-initializer-postgresql) repository to easily initialize and reset the database using SQL scripts.
+
 - Refer to [`Traefik`](https://github.com/ahmettoguz/proxy-traefik) repository to launch reverse proxy to access the pgAdmin dashboard via a custom domain and path.
 
 <br/>
