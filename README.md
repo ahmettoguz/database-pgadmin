@@ -1,4 +1,4 @@
-<h1 id="top" align="center">Database pgAdmin</h1>
+<h1 id="top" align="center">pgAdmin</h1>
 
 <br>
 
