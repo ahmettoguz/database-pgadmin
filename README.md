@@ -1,4 +1,4 @@
-<h1 id="top" align="center">pgAdmin</h1>
+<h1 id="top" align="center">pgAdmin <br/> 🚢 v2.0.0 🚢</h1>
 
 <br>
 
@@ -10,26 +10,8 @@
 
 ## 🔍 Table of Contents
 
-- [About Project](#intro)
-- [Technologies](#technologies)
 - [Features](#features)
-- [Releases](#releases)
 - [System Startup](#system-startup)
-- [Contributors](#contributors)
-
-<br/>
-
-<h2 id="intro">📌 About Project</h2>
-
-This project simplifies the deployment of pgAdmin, using Docker Compose. It provides pre-configured `.env` variable configurations.
-
-<br/>
-
-<h2 id="technologies">☄️ Technologies</h2>
-
-&nbsp; [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
-
-&nbsp; [![pgAdmin](https://img.shields.io/badge/pgadmin-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.pgadmin.org/)
 
 <br/>
 
@@ -41,14 +23,6 @@ This project simplifies the deployment of pgAdmin, using Docker Compose. It prov
 - **Persistent Data:** Binds the data directory from the host machine to the container, ensuring persistent data storage even with container restarts.
 - **Bind Mount Backup Directory:** Enables persistent data storage and backup using a bind mount directory.
 - **.env Configuration:** All environment variables are easily configurable using the `.env` file, simplifying configuration management.
-
-<br/>
-
-<h2 id="releases">🚢 Releases</h2>
-
-&nbsp; [![.](https://img.shields.io/badge/2.0.0-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/database-pgadmin/tree/v2.0.0)
-
-&nbsp; [![.](https://img.shields.io/badge/1.0.0-233838?style=flat&label=version&labelColor=470137&color=077521)](https://github.com/ahmettoguz/database-pgadmin/tree/v1.0.0)
 
 <br/>
 
@@ -102,9 +76,5 @@ docker logs -f                   database-pgadmin-c
 - Refer to [`Traefik`](https://github.com/ahmettoguz/proxy-traefik) repository to launch reverse proxy to access the pgAdmin dashboard via a custom domain and path.
 
 <br/>
-
-<h2 id="contributors">👥 Contributors</h2>
-
-<a href="https://github.com/ahmettoguz" target="_blank"><img width=60 height=60 src="https://avatars.githubusercontent.com/u/101711642?v=4"></a>
 
 ### [🔝](#top)
