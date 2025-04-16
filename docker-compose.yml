@@ -1,0 +1,21 @@
+####################################### Services
+services:
+  pgadmin:
+    image: ahmettoguz/pgadmin4:9
+    container_name: database-pgadmin-c
+    volumes:
+      - ./mount:/var/lib/pgadmin
+      - ${BACKUP_DIRECTORY}:/var/lib/pgadmin/storage
+    env_file:
+      - ./.env
+    networks:
+      - network-database
+    restart: ${RESTART_POLICY}
+    user: root
+    # ports:
+    #  - 9001:80
+
+####################################### Networks
+networks:
+  network-database:
+    external: true
