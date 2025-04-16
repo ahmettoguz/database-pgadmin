@@ -54,6 +54,8 @@ This project simplifies the deployment of pgAdmin, using Docker Compose. It prov
 
 <h2 id="system-startup">🚀 System Startup</h2>
 
+- Refer to [`PostgreSQL`](https://github.com/ahmettoguz/database-postgresql) repository to launch PostgreSQL database.
+
 - Create a new directory named `database`.
 
 ```
@@ -89,7 +91,15 @@ docker compose -p database up -d pgadmin
 docker logs -f                   database-pgadmin-c
 ```
 
-- Refer to [`PostgreSQL`](https://github.com/ahmettoguz/database-postgresql) repository to launch PostgreSQL database.
+- Once the UI is accessible, register a new server.
+
+- Under the General tab, set the Name to `postgresql`.
+
+- Under the Connection tab, set the Host name to `postgresql`.
+
+- When create a backup, the file will be saved in the backup directory specified by the path in the .env file.
+
+- Refer to [`Traefik`](https://github.com/ahmettoguz/proxy-traefik) repository to launch reverse proxy to access the pgAdmin dashboard via a custom domain and path.
 
 <br/>
 
