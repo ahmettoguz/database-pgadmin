@@ -13,8 +13,6 @@
 - [Features](#features)
 - [System Startup](#system-startup)
 
-&nbsp; [![.Env](https://img.shields.io/badge/.ENV-ECD53F.svg?style=for-the-badge&logo=dotenv&logoColor=black)](https://www.ibm.com/docs/bg/aix/7.2?topic=files-env-file)
-
 <br/>
 
 <h2 id="features">🔥 Features</h2>
