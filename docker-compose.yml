@@ -4,7 +4,7 @@ services:
     image: ahmettoguz/pgadmin4:9
     container_name: database-pgadmin-c
     volumes:
-      - ./mount:/var/lib/pgadmin
+      - volume-pgadmin:/var/lib/pgadmin
       - ${BACKUP_DIRECTORY}:/var/lib/pgadmin/storage
     env_file:
       - ./.env
@@ -19,3 +19,8 @@ services:
 networks:
   network-database:
     external: true
+
+####################################### Volumes
+volumes:
+  volume-pgadmin:
+    name: volume-pgadmin
