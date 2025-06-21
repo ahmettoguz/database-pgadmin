@@ -1,4 +1,4 @@
-<h1 id="top" align="center">pgAdmin <br/> 🚢 v2.0.0 🚢</h1>
+<h1 id="top" align="center">pgAdmin <br/> 🚢 v2.1.0 🚢</h1>
 
 <br>
 
