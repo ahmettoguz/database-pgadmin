@@ -1,8 +1,8 @@
 ####################################### Services
 services:
-  pgadmin:
+  service-pgadmin:
     image: ahmettoguz/pgadmin4:9
-    container_name: database-pgadmin-c
+    container_name: container-pgadmin
     volumes:
       - volume-pgadmin:/var/lib/pgadmin
       - ${BACKUP_DIRECTORY}:/var/lib/pgadmin/storage

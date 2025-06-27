@@ -48,6 +48,8 @@ This project simplifies the deployment of pgAdmin, using Docker Compose. It prov
 
 <h2 id="releases">🚢 Releases</h2>
 
+&nbsp; [![.](https://img.shields.io/badge/2.1.1-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/database-pgadmin/tree/v2.1.1)
+
 &nbsp; [![.](https://img.shields.io/badge/2.1.0-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/database-pgadmin/tree/v2.1.0)
 
 &nbsp; [![.](https://img.shields.io/badge/2.0.0-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/database-pgadmin/tree/v2.0.0)
@@ -90,11 +92,11 @@ docker network create network-database
 - Run container.
 
 ```
-docker stop                      database-pgadmin-c
-docker rm                        database-pgadmin-c
+docker stop                      container-pgadmin
+docker rm                        container-pgadmin
 docker volume rm                 volume-pgadmin
-docker compose -p database up -d pgadmin
-docker logs -f                   database-pgadmin-c
+docker compose -p database up -d service-pgadmin
+docker logs -f                   container-pgadmin
 ```
 
 - Once the UI is accessible, register a new server.
