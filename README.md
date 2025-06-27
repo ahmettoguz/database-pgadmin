@@ -103,7 +103,7 @@ docker logs -f                   container-pgadmin
 
 - Under the General tab, set the name to `postgresql`.
 
-- Under the Connection tab, set the Host name to `postgresql`.
+- Under the Connection tab, set the Host name to `service-postgresql`.
 
 - When create a backup, the file will be saved in the backup directory specified by the path in the `.env` file.
 
