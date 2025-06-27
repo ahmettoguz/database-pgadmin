@@ -60,11 +60,11 @@ docker network create network-database
 - Run container.
 
 ```
-docker stop                      database-pgadmin-c
-docker rm                        database-pgadmin-c
+docker stop                      container-pgadmin
+docker rm                        container-pgadmin
 docker volume rm                 volume-pgadmin
-docker compose -p database up -d pgadmin
-docker logs -f                   database-pgadmin-c
+docker compose -p database up -d service-pgadmin
+docker logs -f                   container-pgadmin
 ```
 
 - Once the UI is accessible, register a new server.
