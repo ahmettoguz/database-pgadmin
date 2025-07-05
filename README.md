@@ -44,6 +44,12 @@ git clone https://github.com/ahmettoguz/database-pgadmin
 cd database-pgadmin
 ```
 
+- Switch version.
+
+```
+git checkout v2.1.2
+```
+
 - Create `.env` file based on the `.env.example` file with credentails.
 
 ```
@@ -57,7 +63,7 @@ nano .env
 docker network create network-database
 ```
 
-- Run container.
+- Manage container.
 
 ```
 docker stop                      container-pgadmin
